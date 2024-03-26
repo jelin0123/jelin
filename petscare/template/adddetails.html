@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Material Login Form a Responsive Widget Template :: w3layouts</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Art Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates,
+		Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+    />
+    <!-- /meta tags -->
+    <!-- custom style sheet -->
+    <link href="{% static 'log/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <!-- /custom style sheet -->
+    <!-- fontawesome css -->
+    <link href="{% static 'log/css/fontawesome-all.css' %}" rel="stylesheet" />
+    <!-- /fontawesome css -->
+    <!-- google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- /google fonts-->
+
+</head>
+<body>
+<div class="topnav" align="right">
+    <br>
+  <a class="active" href="cprofile1"><b>&nbsp;&nbsp;&nbsp;HOME</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="active" href="logout"><b>&nbsp;&nbsp;&nbsp;LOGOUT</b></a>&nbsp;&nbsp;&nbsp;
+</div>
+<h2 style="color:white" ><b>Add Services</b></h2>
+       <div class=" w3l-login-form">
+<!--      <h2>Register Here</h2>-->
+
+        <form action="adddetails" method="POST">
+        {% csrf_token %}
+			<div class=" w3l-form-group">
+                <label>Username:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="n1" class="form-control" value="{{r.Username}}" required="required" readonly/>
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Name:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="n2" class="form-control" value="{{r.Name}}" required="required" readonly/>
+                </div>
+            </div>
+
+
+          <div class=" w3l-form-group">
+                <label>Service</label>
+                <div class="group">
+                    <i class="fas fa-lock"></i>
+                    <input type="text" name="n3" class="form-control" placeholder="service" required="required" />
+                </div>
+            </div>
+
+          <div class=" w3l-form-group">
+                <label>Description:</label>
+                <div class="group">
+                    <i class="fas fa-lock"></i>
+                    <input type="text" name="n4" class="form-control" placeholder="description" required="required" />
+                </div>
+            </div>
+          <div class=" w3l-form-group">
+                <label>Amount:</label>
+                <div class="group">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" name="n5" class="form-control" placeholder="Amount" required="required" />
+                </div>
+            </div>
+
+			<button type="submit" onclick="return confirm('Do you want to add this details?')">Add</button>
+        </form>
+    </div>
+</body>
+</html>

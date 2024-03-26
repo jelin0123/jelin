@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Material Login Form a Responsive Widget Template :: w3layouts</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Art Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates,
+		Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+    />
+    <!-- /meta tags -->
+    <!-- custom style sheet -->
+    <link href="{% static 'log/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <!-- /custom style sheet -->
+    <!-- fontawesome css -->
+    <link href="{% static 'log/css/fontawesome-all.css' %}" rel="stylesheet" />
+    <!-- /fontawesome css -->
+    <!-- google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- /google fonts-->
+
+</head>
+<body>
+<div class="topnav" align="right">
+    <br>
+<!--  <a class="active" href="/"><i class="fa fa-home"></i><b>&nbsp;&nbsp;&nbsp;HOME</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <input type="button" value="BACK" style="border-radius: 12px;background-color:white"onclick="history.back()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--  <a href="#news">News</a>-->
+<!--  <a href="#contact">Contact</a>-->
+<!--  <a href="#about">About</a>-->
+</div>
+    <h1></h1>
+    <div class=" w3l-login-form">
+        <h2 style="color:white"><b>Update profile</b></h2>
+        <form action="ctupdate" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+            {% for i in r %}
+            <div class=" w3l-form-group">
+                <label>Name:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="c1" value="{{i.Name}}" class="form-control" placeholder="Name" required="required" />
+                </div>
+            </div>
+
+          <div class=" w3l-form-group">
+                <label>Address:</label>
+                <div class="group">
+                    <i class="fas fa-address-card"></i>
+                    <input type="text" name="c2" value="{{i.Address}}" class="form-control" placeholder="Address" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Location:</label>
+                <div class="group">
+                    <i class="fas fa-address-card"></i>
+                    <input type="text" name="c3" value="{{i.Location}}" class="form-control" placeholder="Address" required="required" />
+                </div>
+            </div>
+
+          <div class=" w3l-form-group">
+                <label>Phone:</label>
+                <div class="group">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" name="c4" value="{{i.Phone}}" class="form-control" placeholder="Phone" required="required"
+                    pattern="[0-9]{10}"
+                           title="Please enter a valid 10-digit phone number"/>
+                </div>
+            </div>
+
+
+          <div class=" w3l-form-group">
+                <label>Email:</label>
+                <div class="group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="c5" value="{{i.Email}}" class="form-control" placeholder="Email" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Licence</label>
+                <div class="group">
+                    <i class="fas fa-address-card"></i>
+                    <input type="file" name="c6" value="{{i.Licence}}" class="form-control" placeholder="Licence" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Photo</label>
+                <div class="group">
+                    <i class="fas fa-address-card"></i>
+                    <input type="file" name="c7" value="{{i.Photo}}" class="form-control" placeholder="Photo" required="required" />
+                </div>
+            </div>
+
+            <div class=" w3l-form-group" hidden="">
+                <label>Username:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="c8"  value="{{i.Username}}" class="form-control" placeholder="Username" required="required" hidden="">
+                </div>
+            </div>
+
+
+            {% endfor %}
+			<button type="submit" onclick="return confirm('Do you want to save this changes?')">submit</button>
+        </form>
+    </div>
+</body>
+</html>

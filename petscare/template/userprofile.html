@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dogs Care - Animals & Pets Category Responsive Website Template - Home : W3Layouts</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+<!--    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">-->
+     <link rel="stylesheet" href="{% static 'user/css/style-starter.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="">
+                        <i class="fa fa-paw mr-1" aria-hidden="true"></i>Pets Care</a>
+                </h1>
+                <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index1.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="uprofile">home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout">Logout</a>
+                        </li>
+<!--<i class="fa fa-arrow-left" aria-hidden="true"></i>-->
+<input type="button" value="BACK" onclick="history.back()" style="border-radius: 12px;background-color:white;">
+
+
+                        <!-- search button -->
+<!--                        <div class="search-right">-->
+<!--                            <form action="#search" method="GET" class="search-box position-relative">-->
+<!--                                <div class="input-search">-->
+<!--                                    <input type="search" placeholder="Enter Keyword" name="search" required="required"-->
+<!--                                        autofocus="" class="search-popup">-->
+<!--                                </div>-->
+<!--                                <button type="submit" class="btn search-btn"><i class="fa fa-search"-->
+<!--                                        aria-hidden="true"></i></button>-->
+
+
+                                <!--<li class="nav-item active">
+                            <a class="nav-link" href="det">details <span class="sr-only">(current)</span></a>
+                        </li>-->
+                            </form>
+
+                        <!-- //search button -->
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- banner section -->
+    <section class="w3l-banner pt-5" >
+<!--{% for i in r %}-->
+<!--   <div class="container"style="height:auto;background-color:white;opacity:0.7">>-->
+<!--   <div class="card" align="center">-->
+<!--&lt;!&ndash;  <img src="img.jpg" alt="John" style="width:100%">&ndash;&gt;-->
+<!--  <h1>{{i.Name}}</h1>-->
+<!--  <p class="title">Address:{{i.Address}}</p>-->
+<!--  <p>{{i.Phone}}</p>-->
+<!--  <p>{{i.Email}}</p>-->
+<!--  <p>{{i.Username}}</p>-->
+<!--  <a href="cpswd">Change password</a>-->
+<!--            <form method="POST" action="uedit">-->
+<!--                        {% csrf_token %}-->
+<!--                        <input type="text" value="{{i.Username}}" name="c1" hidden="">-->
+<!--                        <input type="submit" value="Update" style="border-radius: 12px;background-color:lightgreen">-->
+<!--            </form>-->
+<!--            {% endfor %}-->
+
+
+
+
+        <div class="container">
+            <div class="row">
+<!--                <div class="col-xl-6 banner-left">-->
+                    <div class="container" style="height:auto;background-color:white;opacity:0.8">
+                    <table class="table table-default " >
+
+<!--                        <style="background-color:#969741" >>-->
+                    <thead>
+                    <th><h5><b>Name</b></h5></th>
+                    <th><h5><b>Address</b></h5></th>
+                    <th><h5><b>Phone</b></h5></th>
+                     <th><h5><b>Email</b></h5></th>
+                    <th><h5><b>Username</b></h5></th>
+                    </thead>
+                    <tbody>
+                    {% for i in r %}
+                    <td><b>{{i.Name}}</b></td>
+                    <td><b>{{i.Address}}</b></td>
+                    <td><b>{{i.Phone}}</b></td>
+                    <td><b>{{i.Email}}</b></td>
+                    <td><b>{{i.Username}}</b></td>
+                    <td>
+                        <b><a href="cpswd">Change Password</a></b>
+                    </td>
+                    <td>
+                        <form method="POST" action="uedit">
+                        {% csrf_token %}
+                        <input type="text" value="{{i.Username}}" name="c1" hidden="">
+                        <input type="submit" value="Update" style="border-radius: 12px;background-color:lightgreen">
+                        </form>
+                    </td>
+                    </tbody>
+                    {% endfor %}
+                </table>
+                    </div>
+
+
+<!--                    <h3 class="text-white mb-3 title">Providing Special Care<br>-->
+<!--                        For <span class="type-js"><span class="text-js">Your Pets! </span></span></h3>-->
+<!--                    <p class="lead text-white">We offer special services for special pets!-->
+<!--                    </p>-->
+<!--                    <div class="d-flex align-items-center mt-5">-->
+<!--                        <a class="btn btn-style-white mr-2" href="services">View Our Services</a>-->
+<!--&lt;!&ndash;                        <a class="btn btn-style-white btn-style-border" href="contact">Hire Us</a>&ndash;&gt;-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+<!--           <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"-->
+<!--                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"-->
+<!--                    aria-label="Toggle navigation">-->
+<!--                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>-->
+<!--                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>-->
+<!--                </button>-->
+
+<!--                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">-->
+<!--                    <ul class="navbar-nav ml-lg-auto">-->
+<!--                        <li class="nav-item active">-->
+<!--                            <a class="nav-link" href="uprofile">Back <span class="sr-only">(current)</span></a>-->
+<!--                        </li>-->
+
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="logout">Logout</a>-->
+<!--                        </li>-->
+<!--                        </ul>-->
+<!--                </div>-->
+<!--            </nav>-->
+<!--        </div>-->
+
+<!--    </header>-->
+
+<!-- <section class="w3l-content-bg py-5">-->
+<!--        <div class="container py-md-5 py-4">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-7">-->
+<!--                    <div class="left-content-bg">-->
+<!--&lt;!&ndash;                        <p class="text-tag">Pet Lovers</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <h4 class="text-head-content">Our team is filled with highly dedicated pet lovers</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="btn btn-style-white mt-4" href="#about">Read More</a>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--<div class="container" id="hel">-->
+<!--  <table class="table table-success">-->
+<!--    <thead>-->
+<!--        <th><h5>Name</h5></th>-->
+<!--        <th><h5>Address</h5></th>-->
+<!--        <th><h5>Phone</h5></th>-->
+<!--        <th><h5>Email</h5></th>-->
+<!--        <th><h5>Username</h5></th>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--      {% for i in r %}-->
+<!--            <td>{{i.Name}}</td>-->
+<!--            <td>{{i.Address}}</td>-->
+<!--            <td>{{i.Phone}}</td>-->
+<!--            <td>{{i.Email}}</td>-->
+<!--            <td>{{i.Username}}</td>-->
+<!--            <td>-->
+<!--               <a href="cpswd">Change Password</a>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--            <form method="POST" action="uedit">-->
+<!--            {% csrf_token %}-->
+<!--             <input type="text" value="{{i.Username}}" name="c1" hidden="">-->
+<!--             <input type="submit" value="UPDATE">-->
+<!--         </form>-->
+<!--         </td>-->
+<!--    </tbody>-->
+<!--    {% endfor %}-->
+<!--</table>-->
+
+
+</body>
+</html>

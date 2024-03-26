@@ -1,0 +1,94 @@
+<!--user write feedback-->
+
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+<head>
+	<title>Notable Feedback Form Responsive Widget Template :: w3layouts</title>
+	<!-- Meta Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Notable Feedback Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates,
+ Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--// Meta Tags -->
+	<!-- Stylesheets -->
+	<link href="{% static 'feed/css/font-awesome.css' %}" rel="stylesheet">
+	<link href="{% static 'feed/css/style.css' %}" rel='stylesheet' type='text/css' />
+	<!--// Stylesheets -->
+	<!--fonts-->
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<!--//fonts-->
+</head>
+<body style="overflow:hidden">
+<div class="topnav" align="right">
+	<br>
+	<a class="active" href="uprofile" style="color:white;"><b>HOME</b></a>&nbsp;&nbsp;&nbsp;
+	<a class="active" href="logout" style="color:white;"><b>LOGOUT</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+	<!--background-->
+	<h1>Feedback </h1>
+	<div class="feedback-w3layouts">
+		<form action="feed" method="post">
+			{% csrf_token %}
+			<div class="field-w3-agile-grid leftf">
+				<label>
+					<i class="fa fa-user" aria-hidden="true"></i><b>Name :</b> </label>
+				<input type="text" name="n1" placeholder=" "  required="" />
+			</div>
+			<div class="field-w3-agile-grid rightf">
+				<label>
+					<i class="fa fa-envelope" aria-hidden="true"></i> <b>Email:</b> </label>
+				<input type="text" name="n2" placeholder=" " required="" />
+<!--				<label>-->
+<!--					<i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>-->
+<!--				<input type="email" name="n2" placeholder=" " required="" />-->
+			</div>
+<!--			<div class="clear"> </div>-->
+			<div class="form-option-w3-agileits">
+				<label>
+					<i class="fa fa-comments" aria-hidden="true"></i> Feedback type :</label>
+				<select class="form-control" name="n3">
+					<option></option>
+					<option>Comments</option>
+<!--					<option>Complaints</option>-->
+<!--					<option>Questions</option>-->
+<!--					<option>Suggestions</option>-->
+				</select>
+			</div>
+			<div class="text-field-agileits-w3layouts">
+				<label>
+					<i class="fa fa-comments" aria-hidden="true"></i> Describe Feedback :</label>
+				<textarea name="n4" placeholder=" " required=""></textarea>
+			</div>
+				<div class="field-w3-agile-grid leftf">
+				<label>
+					<i class="fa fa-user" aria-hidden="true"></i> Username :</label>
+				<input type="text" name="n5" placeholder=" " />
+			</div>
+			<input type="submit" value="Submit">
+<!--			<div class="clear"> </div>-->
+		</form>
+	</div>
+	<!--copyright-->
+	<div class="copy-wthree">
+<!--		<p>© 2018 Notable Feedback Form . All Rights Reserved | Design by-->
+<!--			<a href="http://w3layouts.com/" target="_blank">W3layouts</a>-->
+<!--		</p>-->
+		<p>© 2024 Pets Care . All Rights Reserved | Design by Jelin Simon</a>
+		</p>
+	</div>
+	<!--//copyright-->
+
+</body>
+
+</html>

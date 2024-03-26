@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<!-- admin-view all feedbacks -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+{% load static %}
+<head>
+<title>Airy Pets an animals Category Bootstrap responsive Website Template | Home :: W3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Airy Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{% static 'airy/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" /><!-- Bootstrap homecss -->
+<link href="{% static 'airy/css/font-awesome.css' %}" rel="stylesheet"> <!-- Font awesome style-sheet -->
+<link href="{% static 'airy/css/easy-responsive-tabs.css' %}" rel='stylesheet' type='text/css'/><!-- Responsive tabs -->
+<link href="{% static 'airy/css/component.css' %}" rel="stylesheet" type="text/css"  /> <!-- For-Nav-CSS -->
+<link href="{% static 'airy/css/style.css' %}" rel="stylesheet" type="text/css" media="all" /><!-- style sheet -->
+<!--homefonts-->
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<!--//homefonts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body class="cbp-spmenu-push" id="home">
+  <!-- Banner -->
+        <div id="house" class="top-header">
+				<div class="col-md-6 logo-w3l w32">
+					<h1 class="location"><a href="caretaker.html">Pets Care</a></h1>
+				</div>
+				<div class="col-md-6 logo-w3l w31 sea">
+					<div class="right-w3l">
+						<ul class="top-links">
+							<li class="nav-item active">
+                            	<a class="nav-link" href="aprofile" style="color:white">HOME <span class="sr-only">(current)</span></a>
+                        	</li>
+							<li class="nav-item active">
+                            	<a class="nav-link" href="logout" style="color:white" >LOGOUT <span class="sr-only">(current)</span></a>
+                        	</li>
+<!--							<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+<!--							<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+<!--							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+<!--							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+						</ul>
+					</div>
+						<div class="w3ls_search">
+
+				<div class="cd-main-header">
+
+					<ul class="cd-header-buttons">
+						<input type="button" style="border-radius: 50%;" value="Back" onclick="history.back()">
+<!--						<input type="button" value="Back" onclick="history.back()">-->
+<!--						<a href="logout"><i class="fa fa-power-off"></i></a>-->
+<!--						<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>-->
+					</ul> <!-- cd-header-buttons -->
+				</div>
+<!--				<div id="cd-search" class="cd-search">-->
+<!--					<form action="#" method="post">-->
+<!--						<input name="Search" type="search" placeholder="Click enter after typing">-->
+<!--					</form>-->
+<!--				</div>-->
+			</div>
+				</div>
+				<div class="clearfix"></div>
+		</div>
+		<!--bottom-->
+<!--		<div class="button">-->
+<!--			<button id="showLeftPush"><img src="{% static 'airy/images/menu.png' %}" alt=""></button>-->
+<!--		</div>-->
+<!--		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">-->
+<!--			<h3>Menu</h3>-->
+<!--				<a href="aprofile" class="scroll">Back</a>-->
+<!--&lt;!&ndash;				<a href="req">Requests</a>&ndash;&gt;-->
+<!--&lt;!&ndash;				<a href="viewcare">Caretakers</a>&ndash;&gt;-->
+<!--
+
+		</nav>-->
+    <!--start-slider-->
+		<div class="banner" >
+		     <div class="banner-slider">
+				<div class="container">
+			     <div id="top" class="callbacks_container">
+					<ul class="rslides" id="slider4">
+						<li>
+						    <div class="banner-info">
+<!--								<div class="banner-right-agileits">-->
+<div class="container" style="height:auto;opacity:0.8">
+    <table class="table  table-dark" >
+        <thead>
+        <th><h5><b>Pet owner</b></h5></th>
+		<th><h5><b>Pet caretaker</b></h5></th>
+        <th><h5><b>Email</b></h5></th>
+        <th><h5><b>Phone</b></h5></th>
+        <th><h5><b>Complaint</b></h5></th>
+
+        </thead>
+        <tbody>
+{% for i in r %}
+<td>{{i.Name}}</td>
+<td>{{i.Ct}}</td>
+<td>{{i.Email}}</td>
+<td>{{i.Phone}}</td>
+<td>{{i.Complaint}}</td>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+<!--								  <h3>Welcome to airy pets.</h3>-->
+<!--								   <p>We offer all the best quality products and services for your adorable pets.</p>-->
+<!--								   <a href="#services" class="scroll banner-button" >Our Services</a>-->
+								</div>
+
+
+					     </li>
+<!--						  <li>-->
+<!--						     <div class="banner-info">-->
+<!--								<div class="banner-right-agileits">-->
+<!--									<h3>we take care of your pets</h3>-->
+<!--&lt;!&ndash;									 <p>Discover the amazing health services that we can offer to your pets.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;									 <a href="#about" class="scroll banner-button" >About Us</a>&ndash;&gt;-->
+<!--								 </div>-->
+<!--							 </div>-->
+<!--						 </li>-->
+<!--						 <li>-->
+<!--							<div class="banner-info">-->
+<!--								<div class="banner-right-agileits">-->
+<!--									<h3>Adopt a pet.</h3>-->
+<!--									 <p>We have many adorable pets who need a home. Share the Love, adopt!</p>-->
+<!--									 <a href="#adopt" class="scroll banner-button" >Adopt today</a>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						 </li>-->
+					</ul>
+				</div>
+				</div>
+			</div>
+				<div class="clearfix"></div>
+		</div>
+		<!--//end-slider-->
+<!-- HTML !-->
+
+
+<style>
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+</style>
+</body>
+
+	      <!--start-slider-->
+
+<script type="text/javascript" src="{% static 'airy/js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'airy/js/easing.js' %}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- nav-script -->
+			<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+			<script src="{% static 'airy/js/classie.js' %}"></script>
+			<script>
+				var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+					showLeftPush = document.getElementById( 'showLeftPush' ),
+					showRightPush = document.getElementById( 'showRightPush' ),
+					body = document.body;
+
+				showLeftPush.onclick = function() {
+					classie.toggle( this, 'active' );
+					classie.toggle( body, 'cbp-spmenu-push-toright' );
+					classie.toggle( menuLeft, 'cbp-spmenu-open' );
+					disableOther( 'showLeftPush' );
+				};
+
+				function disableOther( button ) {
+					if( button !== 'showLeftPush' ) {
+						classie.toggle( showLeftPush, 'disabled' );
+					}
+					if( button !== 'showRightPush' ) {
+						classie.toggle( showRightPush, 'disabled' );
+					}
+				}
+			</script>
+		<!-- nav-script -->
+		<!-- banner-slide -->
+						<script src="{% static 'airy/js/responsiveslides.min.js' %}"></script>
+					   <script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						  // Slideshow 4
+						  $("#slider4").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+
+						});
+					  </script>
+		<!-- //banner-slide -->
+<!--search-bar-->
+	<script src="{% static 'airy/js/main.js' %}"></script>
+<!--//search-bar-->
+<!--responsive-tabs-script-->
+  <script src="{% static 'airy/js/easy-responsive-tabs.js' %}"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!--//responsive-tabs-script-->
+<!-- script for faq -->
+						<script type="text/javascript">
+							$(function() {
+
+								var menu_ul = $('.faq > li > ul'),
+									   menu_a  = $('.faq > li > a');
+
+								menu_ul.hide();
+
+								menu_a.click(function(e) {
+									e.preventDefault();
+									if(!$(this).hasClass('active')) {
+										menu_a.removeClass('active');
+										menu_ul.filter(':visible').slideUp('normal');
+										$(this).addClass('active').next().stop(true,true).slideDown('normal');
+									} else {
+										$(this).removeClass('active');
+										$(this).next().stop(true,true).slideUp('normal');
+									}
+								});
+
+							});
+						</script>
+<!-- script for faq -->
+<!-- smooth scrolling moving-top -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear'
+			};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+<!-- //smooth scrolling moving-top -->
+<!-- smooth scrolling -->
+<script src="{% static 'airy/js/SmoothScroll.min.js' %}"></script>
+<!-- //smooth scrolling -->
+<!--	<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>-->
+<!-- //smooth scrolling -->
+<script type="text/javascript" src="{% static 'airy/js/bootstrap-3.1.1.min.js' %}"></script>
+</html>
+

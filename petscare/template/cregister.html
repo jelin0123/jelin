@@ -1,0 +1,136 @@
+<!--caretaker registration-->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Material Login Form a Responsive Widget Template :: w3layouts</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Art Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates,
+		Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+    />
+    <!-- /meta tags -->
+    <!-- custom style sheet -->
+    <link href="{% static 'log/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <!-- /custom style sheet -->
+    <!-- fontawesome css -->
+    <link href="{% static 'log/css/fontawesome-all.css' %}" rel="stylesheet" />
+    <!-- /fontawesome css -->
+    <!-- google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- /google fonts-->
+
+</head>
+<body>
+<div class="topnav" align="right">
+    <br>
+  <a class="active" href="/"><i class="fa fa-home"></i><b>&nbsp;&nbsp;&nbsp;HOME</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<!--    <h1 style="color:blue"><b>Caretaker Register Form</b></h1>-->
+    <div class=" w3l-login-form">
+      <h2 style="color:white"><b>Register Here</b></h2>
+        <form action="reg2" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+            <div class=" w3l-form-group">
+                <label>Name:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="c1" class="form-control" placeholder="Name" required="required" />
+                </div>
+            </div>
+
+          <div class=" w3l-form-group">
+                <label>Address:</label>
+                <div class="group">
+                    <i class="fas fa-address-card"></i>
+                    <input type="text" name="c2" class="form-control" placeholder="Address" required="required" />
+                </div>
+            </div>
+
+        <div class=" w3l-form-group">
+                <label>Location:</label>
+                <div class="group">
+                    <i class="fas fa-location-arrow"></i>
+                    <input type="text" name="c3" class="form-control" placeholder="Location" required="required" />
+                </div>
+            </div>
+          <div class=" w3l-form-group">
+                <label>Phone:</label>
+                <div class="group">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" name="c4" class="form-control" placeholder="Phone" required="required"
+                   pattern="[0-9]{10}"
+                    title="Please enter a valid 10-digit phone number "/>
+                </div>
+            </div>
+
+          <div class=" w3l-form-group">
+                <label>Email:</label>
+                <div class="group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="c5" class="form-control" placeholder="Email" required="required" />
+                </div>
+            </div>
+          <div class=" w3l-form-group">
+                <label>Licence:</label>
+                <div class="group">
+                    <i class="fa fa-id-card"></i>
+                    <input type="file" name="c6" class="form-control" placeholder="Licence" required="required" />
+                </div>
+            </div>
+
+          <div class=" w3l-form-group">
+                <label>Photo:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="file" name="c7" class="form-control" placeholder="Photo" required="required" />
+                </div>
+
+            <div class=" w3l-form-group">
+                <label>Username:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="c8"  class="form-control" placeholder="Username" required="required" />
+                </div>
+            </div>
+
+          <div class=" w3l-form-group">
+                <label>Password:</label>
+                <div class="group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="c9" class="form-control" placeholder="Password"
+                           pattern=".{8,}" title="Must contain at least  8 or more characters " required="required" />
+                </div>
+            </div>
+
+			<button type="submit" onclick="return confirm('Do you want to submit the registration?')">Submit</button>
+<!--              <button onclick="cregister()">Submit</button>-->
+          </div>
+        </form>
+        <script>
+                function cregister()
+                {
+                 alert("Your registration completed...);
+                }
+            </script>
+						<!--<div class="new-signup">
+							<a href="#reload" class="signuplink">Forgot username or password?</a>
+						</div>-->
+					<!--<p class="signup">Don’t have account yet? <a href="#signup.html" class="signuplink">Sign Up</a></p>-->
+
+
+            <!--<div class="forgot">
+                <a href="#">Forgot Password?</a>
+                <p><input type="checkbox">Remember Me</p>
+            </div>-->
+ </div>
+        <footer>
+<!--        <p class="copyright-agileinfo"> &copy; 2018 Material Login Form. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>-->
+    <p class="copyright-agileinfo"> &copy;   All Rights Reserved | Design by Jelin Simon<a href="http://w3layouts.com"></a></p>
+
+        </footer>
+
+</body>
+</html>

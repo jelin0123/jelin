@@ -1,0 +1,119 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Grocery Payment Widget Flat Responsive Widget Template :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Grocery Payment Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!-- js -->
+<script type="text/javascript" src="{% static 'pay/js/creditly.js' %}"></script>
+<script src="{% static 'pay/js/jquery.min.js' %}"></script>
+<script type="text/javascript">
+    $(function() {
+      var creditly = Creditly.initialize(
+          '.creditly-wrapper .expiration-month-and-year',
+          '.creditly-wrapper .credit-card-number',
+          '.creditly-wrapper .security-code',
+          '.creditly-wrapper .card-type');
+
+      $(".creditly-card-form .submit").click(function(e) {
+        e.preventDefault();
+        var output = creditly.validate();
+        if (output) {
+          // Your validated credit card output
+          console.log(output);
+        }
+      });
+    });
+</script>
+<!-- //js -->
+<link href="{% static 'pay/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'pay/css/creditly.css' %}" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="main">
+		<h1> Payment </h1>
+		<div class="agileits_main_grid w3layouts_main w3_main_grid">
+			<div class="agileits_main_grid_right agileits_w3layouts_grid_right">
+<!--				<h2>Spices</h2>-->
+<!--				<p>$99/-</p>-->
+			</div>
+			<div class="agileits_main_grid_left w3l_main w3ls_main_grid_left">
+				<div class="agileits_main_grid_left1 agileits_main_grid_left1">
+					<form action="" method="post" class="creditly-card-form agileinfo_form">
+						{% csrf_token %}
+
+						<section class="creditly-wrapper wthree, w3_agileits_wrapper">
+<!--							<input type="text" value="{{i.Username}}" name="n" hidden="">-->
+							<input type="text" value="{{r.Username}}" name="n" hidden="">
+							<div class="credit-card-wrapper">
+								<div class="first-row form-group">
+									<div class="controls">
+										<label class="control-label">Card owner</label>
+										<input class="number credit-card-number form-control" type="text" name="a1"
+													  inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number"
+													  placeholder="name" value="{{r.Pet_owner}}">
+									</div>
+									<div class="controls">
+										<label class="control-label">Name of caretaker</label>
+										<input class="security-code form-control"
+													  inputmode="numeric"
+													  type="text" name="a2"
+													  placeholder="name" value="{{r.Name}}">
+									</div>
+								</div>
+								<div class="second-row form-group">
+									<div class="controls">
+										<label class="control-label">Email</label>
+										<input class="billing-address-name form-control"
+											   type="text" name="a3" placeholder="email" value="{{r.Email}}">
+									</div>
+									<div class="controls">
+										<label class="control-label">Service</label>
+										<input class="expiration-month-and-year form-control"
+											   type="text" name="a4" placeholder="service" value="{{r.Service}}" readonly>
+									</div>
+
+									<div class="controls">
+										<label class="control-label">Amount</label>
+										<input class="expiration-month-and-year form-control"
+											   type="text" name="a5" placeholder="amount" value="{{r1}}" readonly>
+									</div>
+
+									<div class="controls">
+										<label class="control-label">Service charge</label>
+										<input class="expiration-month-and-year form-control"
+											   type="text" name="a6" placeholder="amount" value="{{10}}" readonly>
+									</div>
+								</div>
+<!--								<button class="submit"><span>Pay Now</span></button>-->
+								<button type="button" class="btn btn-info" onclick="return confirm('Do you want to make this payment?')"><a href="../pay/{{r1}}"><b>Pay Now</b></a></button>
+							</div>
+						</section>
+
+					</form>
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="agileits_copyright agile_copy">
+<!--			<p class="w3_agile_right">© 2016 Grocery Payment Widget. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>-->
+			<p class="w3_agile_right">© 2024 Pets Care . All rights reserved | Design by Jelin Simon</a></p>
+		</div>
+	</div>
+</body>
+</html>

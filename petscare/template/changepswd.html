@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Material Login Form a Responsive Widget Template :: w3layouts</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Art Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates,
+		Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+    />
+    <!-- /meta tags -->
+    <!-- custom style sheet -->
+    <link href="{% static 'log/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <!-- /custom style sheet -->
+    <!-- fontawesome css -->
+    <link href="{% static 'log/css/fontawesome-all.css' %}" rel="stylesheet" />
+    <!-- /fontawesome css -->
+    <!-- google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- /google fonts-->
+
+</head>
+
+<body>
+<!--<body style="overflow:hidden">-->
+<div class="topnav" align="right">
+    <br>
+<!--  <a class="active" href="/"><i class="fa fa-home"></i><b>&nbsp;&nbsp;&nbsp;HOME</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <input type="button" value="BACK" style="border-radius: 12px;background-color:white"onclick="history.back()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--  <a href="#news">News</a>-->
+<!--  <a href="#contact">Contact</a>-->
+<!--  <a href="#about">About</a>-->
+</div>
+
+    <h1></h1>
+    <div class=" w3l-login-form">
+        <h2 style="color:yellow"><b>Change password</b></h2>
+        <form action="cpswd" method="POST">
+        {% csrf_token %}
+            <div class=" w3l-form-group">
+                <label>Username:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="n1" class="form-control" placeholder="Username" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Old Password:</label>
+                <div class="group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="n2" class="form-control" placeholder="Old Password" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>New Password:</label>
+                <div class="group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="n3" class="form-control" placeholder="New Password" required="required"
+                     pattern=".{8,}"
+                           title="Must contain at least 8 or more characters "/>
+                </div>
+            </div>
+
+            <button type="submit" onclick="return confirm('Do you want to save this change?')">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <!--<p class="copyright-agileinfo"> &copy; 2018 Material Login Form. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>-->
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

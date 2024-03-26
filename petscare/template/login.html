@@ -1,0 +1,87 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Material Login Form a Responsive Widget Template :: w3layouts</title>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Art Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, 
+		Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+    />
+    <!-- /meta tags -->
+    <!-- custom style sheet -->
+    <link href="{% static 'log/css/style.css' %}" rel="stylesheet" type="text/css" />
+    <!-- /custom style sheet -->
+    <!-- fontawesome css -->
+    <link href="{% static 'log/css/fontawesome-all.css' %}" rel="stylesheet" />
+    <!-- /fontawesome css -->
+    <!-- google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- /google fonts-->
+
+</head>
+<body style="overflow:hidden">
+<div class="topnav" align="right">
+    <br>
+  <a class="active" href="/"><i class="fa fa-home"></i><b>&nbsp;&nbsp;&nbsp;HOME</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--  <a href="#news">News</a>-->
+<!--  <a href="#contact">Contact</a>-->
+<!--  <a href="#about">About</a>-->
+</div>
+
+    <h2 style="color:white"><b>Let’s get started now!</b></h2>
+    <div class=" w3l-login-form">
+        <h2 style="color:white">Login Here</h2>
+        <form action="log" method="POST">
+        {% csrf_token %}
+            <div class=" w3l-form-group">
+                <label>Username:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="n1" class="form-control" placeholder="Username" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Password:</label>
+                <div class="group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="n2" class="form-control" placeholder="Password" required="required" />
+                </div>
+            </div>
+            <div class="forgot">
+                <a href="forgot" style="color:orange"><b>Forgot Password?</b></a>
+<!--                <p><input type="checkbox">Remember Me</p>-->
+            </div>
+
+<!--            <button onclick="log()">Login</button>-->
+<!--            <script>-->
+<!--                function log()-->
+<!--                {-->
+<!--                 alert("Login succesful");-->
+<!--                }-->
+<!--            </script>-->
+            <button type="submit" >Login</button>
+        </form>
+        {% for i in messages %}
+            <a style="color:yellow ;font-size: 20px;font-family:Cursive;text-shadow: 3px 3px 3px #ababab;">
+                {{i}}</a>
+        {% endfor %}
+        <p class=" w3l-register-p">Don't have an account?<br><br>
+            <a href="reg1" class="register"><b>User Sign Up</b></a>&nbsp;  or &nbsp;
+            <a href="reg2" class="register"> <b>Caretaker Sign Up</b></a></p>
+    </div>
+<p class="copyright-agileinfo "align="center"> &copy; Pets Care. All Rights Reserved | Design by Jelin Simon</a></p>
+    <footer>
+<!--        <p class="copyright-agileinfo"> &copy; 2018 Material Login Form. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>-->
+
+    </footer>
+</body>
+</html>
